@@ -2,8 +2,18 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('addTask/', views.addTask, name='addTask'),
-    path('mark_as_done/<int:pk>/', views.mark_as_done, name ='mark_as_done'),
-    path('mark_as_undone/<int:pk>/', views.mark_as_undone, name ='mark_as_undone'),
+    #add task
 
+    path('addTask/', views.addTask, name='addTask'),
+    
+    #mark_as_done
+
+    path('mark_as_done/<int:pk>/', views.mark_as_done, name ='mark_as_done'),
+    
+    #mark_as_undone
+    
+    path('mark_as_undone/<int:pk>/', views.mark_as_undone, name ='mark_as_undone'),
+    
+    #edit task reature
+    path('edit_task/<int:pk>/', views.edit_task, name='edit_task'),
 ]
